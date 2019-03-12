@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "moduleResolution": "node",
+    "module": "CommonJS",
+    "target": "ES2017",
+    "lib": ["esnext"],
+    "esModuleInterop": true,
+    "resolveJsonModule": true
+  }
+}
