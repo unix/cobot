@@ -1,0 +1,16 @@
+{
+  "name": "cobot",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:WittBulter/cobot.git",
+  "author": "WittBulter <nanazuimeng123@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@haifeng-fe/tslint-config": "^1.0.0",
+    "@types/koa": "^2.0.48",
+    "@types/node": "^11.11.0"
+  },
+  "dependencies": {
+    "node-fetch": "^2.3.0"
+  }
+}
