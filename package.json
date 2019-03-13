@@ -1,7 +1,7 @@
 {
   "name": "cobot",
   "version": "0.1.1",
-  "description": "A bot for gitlab.",
+  "description": "A user-experience-focused middleware for building Gitlab applications.",
   "main": "./dist/index.js",
   "module": "./dist/index.js",
   "repository": "git@github.com:WittBulter/cobot.git",
@@ -10,6 +10,7 @@
   "scripts": {
     "lint": "tslint -c tslint.yml -p tsconfig.json",
     "clean": "rm -rf ./dist",
+    "now-build": "node docs.js",
     "build": "yarn run clean && yarn run lint && tsc"
   },
   "files": [

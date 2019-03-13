@@ -2,7 +2,7 @@
 
 A user-experience-focused middleware for building Gitlab applications.
 
-supports: [Express](https://github.com/expressjs/express) / [Koa](https://github.com/koajs/koa)
+Supports: [Express](https://github.com/expressjs/express) / [Koa](https://github.com/koajs/koa)
 
 <br/>
 
@@ -18,20 +18,27 @@ supports: [Express](https://github.com/expressjs/express) / [Koa](https://github
 
 <br/>
 
+### How to use
+
+1. install robot: `npm i cobot`.
+
+2. import to your nodejs server:
+
+```ts
+// express
+import cobot, { BotEvents } from 'cobot'
+app.use(cobot.express())
+
+// koa2
+app.use(cobot.koa())
+```
+
+3. set webhook on gitlab: `Settings > integrations > url('http://yourhost/') > Add webhook`. you can fill in any api on your nodjes server, robot automatically identifies requests from webhooks.
+
+
 ### Example
 
 #### Print `ok` when webhook is triggered.
-1. import and use `cobot` in your server.
-
-```ts
-import cobot, { BotEvents } from 'cobot'
-
-//...
-app.use(cobot.express())
-```
-
-2. listen hook event.
-
 ```ts
 const bot = cobot.lift()
 bot.on(BotEvents.MergeRequest, context => console.log('ok'))
@@ -52,19 +59,20 @@ bot.on(BotEvents.IssueOnOpen, context => {
 
 #### Don't worry about interfaces and methods
 
-![ex1](.github/ex1.png)
-![ex1](.github/ex2.png)
+<div width="800" align="center">
+<img src=".github/ex1.png" width="650" height="150">
+<img src=".github/ex2.png" width="650" height="150">
+</div>
 
 <br/>
 
-### Documentation
 
-
+#### [More examples](https://github.com/wittbulter/cobot/blob/master/examples/)
 
 <br/>
+
 
 ### LICENSE
 
 [MIT](LICENSE)
-
 
