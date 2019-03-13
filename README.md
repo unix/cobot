@@ -4,6 +4,8 @@ A user-experience-focused middleware for building Gitlab applications.
 
 Supports: [Express](https://github.com/expressjs/express) / [Koa](https://github.com/koajs/koa)
 
+About [more examples](https://github.com/wittbulter/cobot/blob/master/examples/)
+
 <br/>
 
 ### Why cobot?
@@ -33,7 +35,7 @@ app.use(cobot.express())
 app.use(cobot.koa())
 ```
 
-3. set webhook on gitlab: `Settings > integrations > url('http://yourhost/') > Add webhook`. you can fill in any api on your nodjes server, robot automatically identifies requests from webhooks.
+3. set webhook on gitlab: `Settings > integrations > url('http://{yourhost}/{any}') > Add webhook`. you can fill in any api with your nodjes server, robot automatically identifies requests from webhooks.
 
 <br/>
 
@@ -44,8 +46,6 @@ app.use(cobot.koa())
 const bot = cobot.lift()
 bot.on(BotEvents.MergeRequest, context => console.log('ok'))
 ```
-
-<br/>
 
 #### 2. Reply `thanks your issue` when a new issue opened.
 
@@ -66,20 +66,12 @@ bot.on(BotEvents.MergeRequest, async(context) => {
 })
 ```
 
-<br/>
-
 #### 4. Don't worry about interfaces and methods
 
 <img src=".github/ex1.png" width="650" height="150">
 <img src=".github/ex2.png" width="650" height="150">
 
 <br/>
-
-
-### [More examples](https://github.com/wittbulter/cobot/blob/master/examples/)
-
-<br/>
-
 
 ### Support events
 
