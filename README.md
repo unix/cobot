@@ -35,10 +35,11 @@ app.use(cobot.koa())
 
 3. set webhook on gitlab: `Settings > integrations > url('http://yourhost/') > Add webhook`. you can fill in any api on your nodjes server, robot automatically identifies requests from webhooks.
 
+<br/>
 
 ### Example
 
-#### Print `ok` when webhook is triggered.
+#### 1. Print `ok` when webhook is triggered.
 ```ts
 const bot = cobot.lift()
 bot.on(BotEvents.MergeRequest, context => console.log('ok'))
@@ -46,7 +47,7 @@ bot.on(BotEvents.MergeRequest, context => console.log('ok'))
 
 <br/>
 
-#### Reply `thanks your issue` when a new issue opened.
+#### 2. Reply `thanks your issue` when a new issue opened.
 
 ```ts
 const bot = cobot.lift()
@@ -55,22 +56,62 @@ bot.on(BotEvents.IssueOnOpen, context => {
 })
 ```
 
+#### 3. Use await/async in callback
+
+```ts
+const bot = cobot.lift()
+bot.on(BotEvents.MergeRequest, async(context) => {
+  const notes = await context.actions.findNotes()
+  console.log(notes)
+})
+```
+
 <br/>
 
-#### Don't worry about interfaces and methods
+#### 4. Don't worry about interfaces and methods
 
-<div width="800" align="center">
 <img src=".github/ex1.png" width="650" height="150">
 <img src=".github/ex2.png" width="650" height="150">
-</div>
 
 <br/>
 
 
-#### [More examples](https://github.com/wittbulter/cobot/blob/master/examples/)
+### [More examples](https://github.com/wittbulter/cobot/blob/master/examples/)
 
 <br/>
 
+
+### Support events
+
+```ts
+BotEvents = [
+  'CommentOnIssue',
+  'CommentOnCommit',
+  'CommentOnSnippet',
+  'CommentOnMergeRequest',
+  'MergeRequest',
+  'WikiCreate',
+  'WikiEdite',
+  'WikiDelete',
+  'PipelineOnRunning',
+  'PipelineOnPending',
+  'PipelineOnSuccess',
+  'PipelineOnFailed',
+  'PipelineOnCanceled',
+  'PipelineOnSkipped',
+  'PipelineOnAnyStatus',
+  'BuildOnAnyStatus',
+  'Push',
+  'Tag',
+  'IssueOnAnyAction',
+  'IssueOnOpen',
+  'IssueOnUpdate',
+  'IssueOnClose',
+  'IssueOnReopen',
+]
+```
+
+<br/>
 
 ### LICENSE
 
