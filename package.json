@@ -1,10 +1,22 @@
 {
   "name": "cobot",
-  "version": "1.0.0",
-  "main": "index.js",
+  "version": "0.1.0",
+  "description": "A bot for gitlab.",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
   "repository": "git@github.com:WittBulter/cobot.git",
   "author": "WittBulter <nanazuimeng123@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "lint": "tslint -c tslint.yml -p tsconfig.json",
+    "clean": "rm -rf ./dist",
+    "build": "yarn run clean && yarn run lint && tsc"
+  },
+  "files": [
+    "./dist",
+    "README.md",
+    "LICENSE"
+  ],
   "devDependencies": {
     "@haifeng-fe/tslint-config": "^1.0.0",
     "@types/koa": "^2.0.48",

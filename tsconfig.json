@@ -4,7 +4,18 @@
     "module": "CommonJS",
     "target": "ES2017",
     "lib": ["esnext"],
+    "outDir": "./dist",
+    "removeComments": true,
     "esModuleInterop": true,
     "resolveJsonModule": true
-  }
+  },
+  "compileOnSave": false,
+  "includes": [
+    "src/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "examples"
+  ]
 }
