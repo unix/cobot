@@ -12,8 +12,7 @@ const bot = cobot.lift({
   private: 'xxx',
 })
 bot.on(BotEvents.MergeRequest, async (context) => {
-  const result = await context.actions.reply('thanks your contribution.')
-  console.log(result, 'result')
+  await context.actions.reply('ok')
 })
 
 app.listen(3000, () => {

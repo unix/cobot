@@ -1,6 +1,6 @@
 import express from 'express'
 import bodyParser from 'body-parser'
-import cobot, { BotEvents } from '../../src'
+import cobot, { BotEvents } from 'cobot'
 
 const app = express()
 app.use(bodyParser.json())
@@ -8,7 +8,7 @@ app.use(cobot.express())
 
 
 const bot = cobot.lift()
-bot.on(BotEvents.MergeRequest, context => {
+bot.on(BotEvents.IssueOnOpen, context => {
   console.log('ok')
 })
 
