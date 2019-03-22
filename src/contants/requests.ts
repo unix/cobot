@@ -45,6 +45,6 @@ export interface MergeRequestActions {
 export interface MergeRequestEvent {
   object_kind: string
   user: User
-  object_attributes: MergeRequest
+  object_attributes: Attributes
   actions: MergeRequestActions
 }
