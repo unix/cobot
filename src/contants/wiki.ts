@@ -16,7 +16,7 @@ export interface Attributes {
   message: string
   slug: string
   url: string
-  action: 'create' | 'edite' | 'delete'
+  action: 'create' | 'edit' | 'delete'
 }
 
 export interface WikiBase {
@@ -33,12 +33,12 @@ export interface WikiCreateEvent extends WikiBase {
   object_attributes: CreateAttributes
 }
 
-export type EditeAttributes = {
-  action: 'edite',
+export type EditAttributes = {
+  action: 'edit',
 } & Attributes
 
-export interface WikiEditeEvent {
-  object_attributes: EditeAttributes
+export interface WikiEditEvent {
+  object_attributes: EditAttributes
 }
 
 export type DeleteAttributes = {

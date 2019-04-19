@@ -81,7 +81,7 @@ BotEvents = [
   'CommentOnMergeRequest',
   'MergeRequest',
   'WikiCreate',
-  'WikiEdite',
+  'WikiEdit',
   'WikiDelete',
   'PipelineOnRunning',
   'PipelineOnPending',

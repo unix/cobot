@@ -12,10 +12,10 @@ export default (content: any) => {
     )
   }
   
-  if (attr.action === 'edite') {
+  if (attr.action === 'edit') {
     return emitter.emit(
-      GITLAB.BotEvents.WikiEdite,
-      (<GITLAB.EventContext[GITLAB.BotEvents.WikiEdite]>content),
+      GITLAB.BotEvents.WikiEdit,
+      (<GITLAB.EventContext[GITLAB.BotEvents.WikiEdit]>content),
     )
   }
   
