@@ -18,6 +18,7 @@ export class Caller {
       const event = headers[GITLAB.HEADERS.EVENT_KEY]
       if (!Caller.isGitlabEvent(event)) return next()
       if (!ctx.request.body) return Caller.notFoundBody()
+      // console.log(ctx.request.body, 123)
       dispenser(event, ctx.request.body)
       return ctx.body = { status: 'ok' }
     }

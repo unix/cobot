@@ -23,7 +23,7 @@ export enum BotEvents {
   CommentOnSnippet = 'CommentOnSnippet',
   MergeRequest = 'MergeRequest',
   WikiCreate = 'WikiCreate',
-  WikiEdite = 'WikiEdite',
+  WikiUpdate = 'WikiUpdate',
   WikiDelete = 'WikiDelete',
   PipelineOnRunning = 'PipelineOnRunning',
   PipelineOnPending = 'PipelineOnPending',
@@ -49,7 +49,7 @@ export interface EventContext {
   [BotEvents.CommentOnSnippet]: NOTES.NoteSnippetEvent
   [BotEvents.MergeRequest]: REQUEST.MergeRequestEvent
   [BotEvents.WikiCreate]: WIKI.WikiCreateEvent
-  [BotEvents.WikiEdite]: WIKI.WikiEditeEvent
+  [BotEvents.WikiUpdate]: WIKI.WikiUpdateEvent
   [BotEvents.WikiDelete]: WIKI.WikiDeleteEvent
   [BotEvents.PipelineOnAnyStatus]: PIPELINE.PipelineEvent
   [BotEvents.PipelineOnRunning]: PIPELINE.PipelineEvent
