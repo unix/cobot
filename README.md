@@ -20,7 +20,7 @@ Support frameworks: [Express](https://github.com/expressjs/express) / [Koa](http
 
 ### How to use
 
-1. install robot: `npm i cobot`.
+1. install robot: `yarn add cobot` or `npm i cobot`.
 
 2. import to your nodejs server:
 
@@ -81,8 +81,9 @@ BotEvents = [
   'CommentOnMergeRequest',
   'MergeRequest',
   'WikiCreate',
-  'WikiEdite',
+  'WikiUpdate',
   'WikiDelete',
+  'WikiOnAnyAction',
   'PipelineOnRunning',
   'PipelineOnPending',
   'PipelineOnSuccess',
