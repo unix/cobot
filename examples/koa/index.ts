@@ -11,8 +11,8 @@ const bot = cobot.lift({
   host: 'https://gitlab.xxxx.com/',
   private: 'xxx',
 })
-bot.on(BotEvents.MergeRequest, async (context) => {
-  await context.actions.reply('ok')
+bot.on(BotEvents.WikiOnAnyAction, async (context) => {
+  console.log(context.object_attributes.action)
 })
 
 app.listen(3000, () => {
