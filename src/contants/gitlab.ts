@@ -25,6 +25,7 @@ export enum BotEvents {
   WikiCreate = 'WikiCreate',
   WikiUpdate = 'WikiUpdate',
   WikiDelete = 'WikiDelete',
+  WikiOnAnyAction = 'WikiOnAnyAction',
   PipelineOnRunning = 'PipelineOnRunning',
   PipelineOnPending = 'PipelineOnPending',
   PipelineOnSuccess = 'PipelineOnSuccess',
@@ -51,6 +52,7 @@ export interface EventContext {
   [BotEvents.WikiCreate]: WIKI.WikiCreateEvent
   [BotEvents.WikiUpdate]: WIKI.WikiUpdateEvent
   [BotEvents.WikiDelete]: WIKI.WikiDeleteEvent
+  [BotEvents.WikiOnAnyAction]: WIKI.WikiOnAnyAction
   [BotEvents.PipelineOnAnyStatus]: PIPELINE.PipelineEvent
   [BotEvents.PipelineOnRunning]: PIPELINE.PipelineEvent
   [BotEvents.PipelineOnPending]: PIPELINE.PipelineEvent

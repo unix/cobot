@@ -49,5 +49,9 @@ export interface WikiDeleteEvent {
   object_attributes: DeleteAttributes
 }
 
+export interface WikiOnAnyAction {
+  object_attributes: Attributes
+}
+
 
 
