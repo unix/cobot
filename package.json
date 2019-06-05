@@ -21,10 +21,10 @@
     "LICENSE"
   ],
   "devDependencies": {
-    "@haifeng-fe/tslint-config": "^1.0.0",
     "@types/koa": "^2.0.48",
     "@types/node": "^11.11.0",
-    "inquirer": "^6.2.2"
+    "inquirer": "^6.2.2",
+    "tslint-config-lambdas": "^1.1.0"
   },
   "dependencies": {
     "node-fetch": "^2.3.0"
