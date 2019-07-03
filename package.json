@@ -1,6 +1,6 @@
 {
   "name": "cobot",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "A user-experience-focused middleware for building Gitlab applications.",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -24,7 +24,9 @@
     "@types/koa": "^2.0.48",
     "@types/node": "^11.11.0",
     "inquirer": "^6.2.2",
-    "tslint-config-lambdas": "^1.1.0"
+    "tslint": "^5.18.0",
+    "tslint-config-lambdas": "^1.1.1",
+    "typescript": "^3.5.2"
   },
   "dependencies": {
     "node-fetch": "^2.3.0"
