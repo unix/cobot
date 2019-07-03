@@ -5,8 +5,8 @@
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "module": "./dist/index.js",
-  "repository": "git@github.com:WittBulter/cobot.git",
-  "author": "WittBulter <lambdas.dev@gmail.com>",
+  "repository": "git@github.com:unix/cobot.git",
+  "author": "unix <lambdas.dev@gmail.com>",
   "license": "MIT",
   "scripts": {
     "lint": "tslint -c tslint.yml -p tsconfig.json",

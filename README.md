@@ -1,6 +1,6 @@
 ## cobot
 
-A user-experience-focused middleware for building Gitlab applications. [more examples](https://github.com/wittbulter/cobot/blob/master/examples/).
+A user-experience-focused middleware for building Gitlab applications. [more examples](https://github.com/unix/cobot/blob/master/examples/).
 
 Support frameworks: [Express](https://github.com/expressjs/express) / [Koa](https://github.com/koajs/koa).
 
