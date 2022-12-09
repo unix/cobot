@@ -13,6 +13,6 @@
   "dependencies": {
     "body-parser": "^1.18.3",
     "cobot": "^0.1.1",
-    "express": "^4.16.4"
+    "express": "^4.17.3"
   }
 }
